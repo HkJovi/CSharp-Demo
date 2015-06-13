@@ -1,0 +1,4 @@
+LIBRARY "HX1"
+EXPORTS
+fun1 @1
+fun2 @2

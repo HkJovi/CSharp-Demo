@@ -1,0 +1,175 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<style type="text/css">
+@import url("css/style.css");
+ @import url("css/forms.css");
+ @import url("css/forms-btn.css");
+ @import url("css/menu.css");
+ @import url('css/style_text.css');
+ @import url("css/datatables.css");
+ @import url("css/fullcalendar.css");
+ @import url("css/pirebox.css");
+ @import url("css/modalwindow.css");
+ @import url("css/statics.css");
+ @import url("css/tabs-toggle.css");
+ @import url("css/system-message.css");
+ @import url("css/tooltip.css");
+ @import url("css/wizard.css");
+ @import url("css/wysiwyg.css");
+ @import url("css/wysiwyg.modal.css");
+ @import url("css/wysiwyg-editor.css");
+</style>
+<!--[if lte IE 8]>
+		<script type="text/javascript" src="js/excanvas.min.js"></script>
+	<![endif]-->
+
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.backgroundPosition.js"></script>
+<script type="text/javascript" src="js/jquery.placeholder.min.js"></script>
+<script type="text/javascript" src="js/jquery.ui.1.8.17.js"></script>
+<script type="text/javascript" src="js/jquery.ui.select.js"></script>
+<script type="text/javascript" src="js/jquery.ui.spinner.js"></script>
+<script type="text/javascript" src="js/superfish.js"></script>
+<script type="text/javascript" src="js/supersubs.js"></script>
+<script type="text/javascript" src="js/jquery.datatables.js"></script>
+<script type="text/javascript" src="js/fullcalendar.min.js"></script>
+<script type="text/javascript" src="js/jquery.smartwizard-2.0.min.js"></script>
+<script type="text/javascript" src="js/pirobox.extended.min.js"></script>
+<script type="text/javascript" src="js/jquery.tipsy.js"></script>
+<script type="text/javascript" src="js/jquery.elastic.source.js"></script>
+<script type="text/javascript" src="js/jquery.customInput.js"></script>
+<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/jquery.metadata.js"></script>
+<script type="text/javascript" src="js/jquery.filestyle.mini.js"></script>
+<script type="text/javascript" src="js/jquery.filter.input.js"></script>
+<script type="text/javascript" src="js/jquery.flot.js"></script>
+<script type="text/javascript" src="js/jquery.flot.pie.min.js"></script>
+<script type="text/javascript" src="js/jquery.flot.resize.min.js"></script>
+<script type="text/javascript" src="js/jquery.graphtable-0.2.js"></script>
+<script type="text/javascript" src="js/jquery.wysiwyg.js"></script>
+<script type="text/javascript" src="js/controls/wysiwyg.image.js"></script>
+<script type="text/javascript" src="js/controls/wysiwyg.link.js"></script>
+<script type="text/javascript" src="js/controls/wysiwyg.table.js"></script>
+<script type="text/javascript" src="js/plugins/wysiwyg.rmFormat.js"></script>
+<script type="text/javascript" src="js/costum.js"></script>
+<script language="javascript">
+    function mj_OnClick() {
+        var s = document.getElementById('mj_query').value;
+        var lbid = '<%=QueryParams.GetInt("lbid") %>';
+        if (lbid == '0') {
+            s = 'List.aspx?q=' + escape(s);
+        }
+        else {
+            s = 'List.aspx?lbid=' + lbid + '&q=' + escape(s);
+        }
+        window.location.href = s;
+        return false;
+    }
+
+    function mj_OnKeyPress(e) {
+        var keyCode = event.keyCode ? event.keyCode : event.which ? event.which : event.charCode;
+        if (keyCode != 13) return true;
+        return mj_OnClick();
+    }
+</script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body>
+    <form id="form1" runat="server">
+<div id="wrapper">
+  <div id="container">
+    <div class="hide-btn top"></div>
+    <div class="hide-btn center"></div>
+    <div class="hide-btn bottom"></div>
+    <div id="top">
+      <h1 id="logo"><a href="Default.aspx"></a></h1>
+      <div id="menu">
+        <ul>
+          <li><a href="Default.aspx"><img src="gfx/dashboard.png" alt="系统首页" /></a></li>
+          <li><a href="AddXJ.aspx?gkbz=1"><img src="gfx/messages.png" alt="我要写信" /></a> </li>
+          <li><a href="Login.aspx"><img src="gfx/support.png" alt="信件查询" /></a></li>
+          <li><a href="Admin/Login.aspx"><img src="gfx/settings.png" alt="管理登陆" /></a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="left">
+      <div class="box search">
+        <div class="content">
+            <input type="text" id="mj_query" value="<%=QueryParams.GetStr("q") %>" placeholder="Search" onkeypress="return mj_OnKeyPress(this)"/>
+            <button type="button" onclick="return mj_OnClick()"></button>
+        </div>
+      </div>
+      <div class="box submenu">
+        <div class="content">
+          <ul>
+          <asp:Repeater ID="lbList" runat="server" DataSourceID="ds_lbList">
+          <ItemTemplate>
+<li><a href="List.aspx?lbid=<%#Eval("lbid") %>"><%#Eval("lbmc") %></a></li>
+            </ItemTemplate>
+            </asp:Repeater>
+          </ul>
+        </div>
+      </div>
+      <div class="box statics">
+        <div class="content">
+          <ul>
+            <li>
+              <h2>访问统计</h2>
+            </li>
+            <li>今日浏览量
+              <div class="info red"><span><%=GetTodayLLS() %></span></div>
+            </li>
+            <li>今日信件数量
+              <div class="info blue"><span><%=GetTodayXJS() %></span></div>
+            </li>
+            <li>今日回复数量
+              <div class="info green"><span><%=GetTodayHFS() %></span></div>
+            </li>
+            <li>流量总数
+              <div class="info black"><span><%=GetAllInfoCount() %></span></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="box togglemenu">
+        <div class="content">
+          <ul>
+            <li>管理单位：成都校区党政办 </li>
+            <li class="title">联系电话</li>
+            <li class="content"> 办公室电话：028-86290101 </li>
+            <li class="title">联系地址</li>
+            <li class="content"> 四川省成都市温江区东北路555号 </li>
+          </ul>
+        </div>
+      </div>
+      <div class="box statics">
+        <div class="content">
+          <ul>
+            <li>软件版本：<%=BLL.GetDBSet("ver") %> </li>
+            <li class="title">知行工作室</li>
+            <li class="title">2012-04-26</li>
+          </ul>
+        </div>
+      </div>
+
+
+    </div>
+    <div id="right">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+  </div>
+</div>
+    <asp:SqlDataSource ID="ds_lbList" runat="server" 
+        ConnectionString="<%$ ConnectionStrings:zrxxConnectionString %>" 
+        SelectCommand="select * from t_lb where plbid&lt;&gt;-1"></asp:SqlDataSource>
+    </form>
+</body>
+</html>

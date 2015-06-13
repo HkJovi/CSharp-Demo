@@ -1,0 +1,22 @@
+C:\Users\Admin\Desktop\贝斯特产量数据管理系统\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\贝斯特产量数据管理系统\BLL\bin\Debug\BLL.dll
+C:\Users\Admin\Desktop\贝斯特产量数据管理系统\BLL\bin\Debug\BLL.pdb
+C:\Users\Admin\Desktop\贝斯特产量数据管理系统\BLL\bin\Debug\DAL.dll
+C:\Users\Admin\Desktop\贝斯特产量数据管理系统\BLL\bin\Debug\DAL.pdb
+C:\Users\Admin\Desktop\贝斯特产量数据管理系统\BLL\obj\Debug\BLL.dll
+C:\Users\Admin\Desktop\贝斯特产量数据管理系统\BLL\obj\Debug\BLL.pdb
+C:\Users\Admin\Desktop\新建文件夹 (2)\BLL\bin\Debug\BLL.dll
+C:\Users\Admin\Desktop\新建文件夹 (2)\BLL\bin\Debug\BLL.pdb
+C:\Users\Admin\Desktop\新建文件夹 (2)\BLL\bin\Debug\DAL.dll
+C:\Users\Admin\Desktop\新建文件夹 (2)\BLL\bin\Debug\DAL.pdb
+C:\Users\Admin\Desktop\新建文件夹 (2)\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\新建文件夹 (2)\BLL\obj\Debug\BLL.dll
+C:\Users\Admin\Desktop\新建文件夹 (2)\BLL\obj\Debug\BLL.pdb
+C:\Users\Admin\Desktop\新建文件夹 (2)\BLL\bin\Debug\CSkin.dll
+D:\C语言学习资料\数据管理系统（最终beta版）\BLL\bin\Debug\BLL.dll
+D:\C语言学习资料\数据管理系统（最终beta版）\BLL\bin\Debug\BLL.pdb
+D:\C语言学习资料\数据管理系统（最终beta版）\BLL\bin\Debug\DAL.dll
+D:\C语言学习资料\数据管理系统（最终beta版）\BLL\bin\Debug\DAL.pdb
+D:\C语言学习资料\数据管理系统（最终beta版）\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+D:\C语言学习资料\数据管理系统（最终beta版）\BLL\obj\Debug\BLL.dll
+D:\C语言学习资料\数据管理系统（最终beta版）\BLL\obj\Debug\BLL.pdb

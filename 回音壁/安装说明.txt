@@ -1,0 +1,13 @@
+修改web.config文件使其连接到正确的数据库
+先更新数据库，再更新程序，注意程序更新设置好版本号
+
+并在数据库上执行：
+update t_set set v='v1.7' where k='ver'
+
+alter table t_xj add hot nvarchar(1)
+go
+update t_xj set hot='0'
+insert into t_set(k,v)values('LLS','0');
+insert into t_set(k,v)values('TodayLLS','0');
+insert into t_set(k,v)values('Now','2012-02-26');
+insert into t_set(k,v)values('ver','v1.7');

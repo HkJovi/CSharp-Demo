@@ -1,0 +1,170 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="admin_MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<!-- Meta data for SEO -->
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<!-- Template stylesheet -->
+<link href="../css/green/screen.css" rel="stylesheet" type="text/css" media="all">
+<link href="../css/green/datepicker.css" rel="stylesheet" type="text/css" media="all">
+<link href="../css/tipsy.css" rel="stylesheet" type="text/css" media="all">
+<link href="../js/visualize/visualize.css" rel="stylesheet" type="text/css" media="all">
+<link href="../js/jwysiwyg/jquery.wysiwyg.css" rel="stylesheet" type="text/css" media="all">
+<link href="../js/fancybox/jquery.fancybox-1.3.0.css" rel="stylesheet" type="text/css" media="all">
+<link href="../css/tipsy.css" rel="stylesheet" type="text/css" media="all">
+
+<!--[if IE]>
+	<link href="../css/ie.css" rel="stylesheet" type="text/css" media="all">
+	<script type="text/javascript" src="../js/excanvas.js"></script>
+<![endif]-->
+
+<!-- Jquery and plugins -->
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.js"></script>
+<script type="text/javascript" src="../js/jquery.img.preload.js"></script>
+<script type="text/javascript" src="../js/hint.js"></script>
+<script type="text/javascript" src="../js/visualize/jquery.visualize.js"></script>
+<script type="text/javascript" src="../js/jwysiwyg/jquery.wysiwyg.js"></script>
+<script type="text/javascript" src="../js/fancybox/jquery.fancybox-1.3.0.js"></script>
+<script type="text/javascript" src="../js/jquery.tipsy.js"></script>
+<script type="text/javascript" src="../js/custom_green.js"></script>
+
+<style type="text/css">
+    .hided{display:none}
+</style>
+	<script language="javascript">
+	    var g_btQ_ID = '<%=btQ.ClientID %>';
+	    function OnKeyPress(e) {
+	        var keyCode = event.keyCode ? event.keyCode : event.which ? event.which : event.charCode;
+	        if (keyCode != 13) return true;
+	        document.getElementById(g_btQ_ID).click();
+	        return false;
+	    }
+	</script>
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+<div class="content_wrapper"> 
+  
+  <!-- Begin header -->
+  <div id="header">
+    <div id="logo"> <img src="../images/logo.png" alt="logo"/> </div>
+    <div id="search">
+        <asp:TextBox ID="q" runat="server" Text="信件搜索" CssClass="search noshadow"></asp:TextBox>
+        <asp:Button ID="btQ" runat="server" Text="" CssClass="hided" onclick="btQ_Click" />
+    </div>
+    <div id="account_info"> <img src="../images/icon_online.png" alt="Online" class="mid_align"/> 你好 <%=Session["umc"].ToString() %> (<%=GetMyXJCount() %>封需要您处复的信件) | <a href="ChgPwd.aspx">修改密码</a> |
+        <asp:LinkButton ID="lbExitLogin" runat="server" Text="注销登陆" onclick="lbExitLogin_Click"></asp:LinkButton>
+    </div>
+  </div>
+  <!-- End header --> 
+  
+  <!-- Begin left panel --> 
+  <a href="javascript:void(0);" id="show_menu">&raquo;</a>
+  <div id="left_menu"> <a href="javascript:void();" id="hide_menu">&laquo;</a>
+    <ul id="main_menu">
+      <li><a href="../Default.aspx" target="_blank"><img src="../images/icon_home.png" alt="Home"/>站点首页</a></li>
+      <li><a href="./Default.aspx"><img src="../images/icon_home.png" alt="Home"/>后台管理首页</a></li>
+      <li> <a id="menu_pages" href="#"><img src="../images/icon_pages.png" alt="Pages"/>我处理的信件</a>
+        <ul>
+          <li><a href="ShowMB.aspx">回复模版管理</a></li>
+<%
+    if (XRBZ != 0)Response.Write("<li><a href='List.aspx?lb=1'>新信件</a></li>");
+%>
+          <li><a href="List.aspx?lb=0">转处给我的信件</a></li>
+          <li><a href="List.aspx?lb=2">我转处给别人的信件</a></li>
+          <li><a href="List.aspx?lb=3">我处复过的信件</a></li>
+        </ul>
+      </li>
+      <%
+          if (XRBZ != 0)
+          {
+              Response.Write(@"
+      <li> <a href='#'><img src='../images/icon_posts.png' alt='Posts'/>特殊信件</a>
+        <ul>
+          <li><a href='HSZ.aspx'>信件回收站</a></li>
+          <li><a href='BXD.aspx'>不选登的信件</a></li>
+        </ul>
+      </li>
+      <li> <a href='#'><img src='../images/icon_media.png' alt='Media'/>信件相关管理</a>
+        <ul>
+          <li><a href='ShowLB.aspx'>信件分类管理</a></li>
+          <li><a href='ShowLX.aspx'>信件类型管理</a></li>
+        </ul>
+      </li>
+      <li> <a href=''><img src='../images/icon_users.png' alt='Users'/>用户管理</a>
+        <ul>
+          <li><a href='ShowBM.aspx'>部门（级别）管理</a></li>
+          <li><a href='ShowQXZ.aspx'>权限组管理</a></li>
+          <li><a href='ShowUser.aspx'>用户管理</a></li>
+        </ul>
+      </li>
+");
+          }          
+      %>
+    </ul>
+    <br class="clear"/>
+    
+    <!-- Begin left panel calendar -->
+    <div id="calendar"></div>
+    <!-- End left panel calendar --> 
+    
+  </div>
+  <!-- End left panel --> 
+  
+  <!-- Begin content -->
+  <div id="content">
+    <div class="inner">
+    <asp:Panel ID="plCtrl" runat="server">
+      <h1>控制面板</h1>
+      
+      <!-- Begin shortcut menu -->
+      <ul id="shortcut">
+        <li> <a href="Query.aspx?lb=1" id="shortcut_home" title="所有未处复及未转处的信件"> <img src="../images/shortcut/home.png" alt="home"/><br/>
+          <strong>新信件</strong> </a> </li>
+        <li> <a href="Query.aspx?lb=2" id="shortcut_contacts" title="所有转处中的信件"> <img src="../images/shortcut/contacts.png" alt="contacts"/><br/>
+          <strong>转处</strong> </a> </li>
+        <li> <a href="Query.aspx?lb=3" id="shortcut_posts" title="所有已处复的信件"> <img src="../images/shortcut/posts.png" alt="posts"/><br/>
+          <strong>已处复</strong></a> </li>
+        <li> <a href="Query.aspx?lb=0" title="所有信件"> <img src="../images/shortcut/calendar.png" alt="calendar"/><br/>
+          <strong>全部</strong> </a> </li>
+        <li> <a href="TJ.aspx" title="全局回复情况统计"> <img src="../images/shortcut/stats.png" alt="stats"/><br/>
+          <strong>统计</strong> </a> </li>
+        <li> <a href="Set.aspx" title="站点设置"> <img src="../images/shortcut/setting.png" alt="setting"/><br/>
+          <strong>设置</strong> </a> </li>
+      </ul>
+      <!-- End shortcut menu --> 
+      
+      <!-- Begin shortcut notification -->
+      <div id="shortcut_notifications"> <span class="notification" rel="shortcut_home"><%=TJCount(1) %></span> <span class="notification" rel="shortcut_contacts"><%=TJCount(2)%></span> <span class="notification" rel="shortcut_posts"><%=TJCount(3)%></span> </div>
+      <!-- End shortcut noficaton --> 
+      
+      <br class="clear"/>
+
+</asp:Panel>
+
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+
+    </div>
+    <br class="clear"/>
+    <br class="clear"/>
+    
+    <!-- Begin footer -->
+    <div id="footer"> 四川农业大学 网络中心 知行工作室 <strong>投诉建议分级处理系统</strong> （版本号 Beta 1.0） </div>
+    <!-- End footer --> 
+    
+  </div>
+  <!-- End content --> 
+</div>
+
+    </form>
+</body>
+</html>

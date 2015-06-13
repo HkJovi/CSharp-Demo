@@ -1,0 +1,509 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>信息管理系统</title>
+<meta name="description" content="Administry - Admin Template " />
+<meta name="keywords" content="Admin,Template" />
+<!-- We need to emulate IE7 only when we are to use excanvas -->
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<![endif]-->
+<!-- Favicons --> 
+<link rel="shortcut icon" type="image/png" HREF="img/favicons/favicon.png"/>
+<link rel="icon" type="image/png" HREF="img/favicons/favicon.png"/>
+<link rel="apple-touch-icon" HREF="img/favicons/apple.png" />
+<!-- Main Stylesheet --> 
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<!-- Colour Schemes
+Default colour scheme is blue. Uncomment prefered stylesheet to use it.
+<link rel="stylesheet" href="css/brown.css" type="text/css" media="screen" />  
+<link rel="stylesheet" href="css/gray.css" type="text/css" media="screen" />  
+<link rel="stylesheet" href="css/green.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/pink.css" type="text/css" media="screen" />  
+<link rel="stylesheet" href="css/red.css" type="text/css" media="screen" />
+-->
+<!-- Your Custom Stylesheet --> 
+<link rel="stylesheet" href="css/custom.css" type="text/css" />
+<!--swfobject - needed only if you require <video> tag support for older browsers -->
+<script type="text/javascript" SRC="js/swfobject.js"></script>
+<!-- jQuery with plugins -->
+<script type="text/javascript" SRC="js/jquery-1.4.2.min.js"></script>
+<!-- Could be loaded remotely from Google CDN : <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> -->
+<script type="text/javascript" SRC="js/jquery.ui.core.min.js"></script>
+<script type="text/javascript" SRC="js/jquery.ui.widget.min.js"></script>
+<script type="text/javascript" SRC="js/jquery.ui.tabs.min.js"></script>
+<!-- jQuery tooltips -->
+<script type="text/javascript" SRC="js/jquery.tipTip.min.js"></script>
+<!-- Superfish navigation -->
+<script type="text/javascript" SRC="js/jquery.superfish.min.js"></script>
+<script type="text/javascript" SRC="js/jquery.supersubs.min.js"></script>
+<!-- jQuery form validation -->
+<script type="text/javascript" SRC="js/jquery.validate_pack.js"></script>
+<!-- jQuery popup box -->
+<script type="text/javascript" SRC="js/jquery.nyroModal.pack.js"></script>
+<!-- jQuery graph plugins -->
+<!--[if IE]><script type="text/javascript" src="js/flot/excanvas.min.js"></script><![endif]-->
+    <%--<script type="text/javascript" SRC="js/flot/jquery.flot.min.js"></script>--%>
+<!-- Internet Explorer Fixes --> 
+<!--[if IE]>
+<link rel="stylesheet" type="text/css" media="all" href="css/ie.css"/>
+<script src="js/html5.js"></script>
+<![endif]-->
+<!--Upgrade MSIE5.5-7 to be compatible with MSIE8: http://ie7-js.googlecode.com/svn/version/2.1(beta3)/IE8.js -->
+<!--[if lt IE 8]>
+<script src="js/IE8.js"></script>
+<![endif]-->
+    <style>
+* {margin:0;}
+body {font-size:12px;}
+#container div{margin-top:5px;}
+#select_city h3{float:left;}
+#main_city,#all_province {clear:both;}
+#main_city div,#all_province div{width:600px;clear:left;}
+#main_city h4,#all_province h4{float:left;display:inline;font-size:16px;}
+#main_city div span,#all_province div span{margin:0 10px;cursor:pointer;font-size:12px;}
+#float_lay{width:200px;height:120px;border:1px #d1d1d1 solid;position:absolute;background:#fff;z-index:999;display:none;}
+</style>
+    <script type="text/javascript">
+        //弹出层
+        function openLayer(objId, conId) {
+            var arrayPageSize = getPageSize();//调用getPageSize()函数
+            var arrayPageScroll = getPageScroll();//调用getPageScroll()函数
+            if (!document.getElementById("popupAddr")) {
+                //创建弹出内容层
+                var popupDiv = document.createElement("div");
+                //给这个元素设置属性与样式
+                popupDiv.setAttribute("id", "popupAddr")
+                popupDiv.style.position = "absolute";
+                popupDiv.style.border = "1px solid #ccc";
+                popupDiv.style.background = "#fff";
+                popupDiv.style.zIndex = 99;
+                //创建弹出背景层
+                var bodyBack = document.createElement("div");
+                bodyBack.setAttribute("id", "bodybg")
+                bodyBack.style.position = "absolute";
+                bodyBack.style.width = "100%";
+                bodyBack.style.height = (arrayPageSize[1] + 35 + 'px');
+                bodyBack.style.zIndex = 98;
+                bodyBack.style.top = 0;
+                bodyBack.style.left = 0;
+                bodyBack.style.filter = "alpha(opacity=50)";
+                bodyBack.style.opacity = 0.5;
+                bodyBack.style.background = "#ddf";
+                //实现弹出(插入到目标元素之后)
+                var mybody = document.getElementById(objId);
+                insertAfter(popupDiv, mybody);//执行函数insertAfter()
+                insertAfter(bodyBack, mybody);//执行函数insertAfter()
+            }
+            //显示背景层
+            document.getElementById("bodybg").style.display = "";
+            //显示内容层
+            var popObj = document.getElementById("popupAddr")
+            popObj.innerHTML = document.getElementById(conId).innerHTML;
+            popObj.style.display = "";
+            //让弹出层在页面中垂直左右居中(统一)
+             //popObj.style.width  = "600px";
+             //popObj.style.height = "400px";
+             //popObj.style.top  = arrayPageScroll[1] + (arrayPageSize[3] - 35 - 400) / 2 + 'px';
+             //popObj.style.left = (arrayPageSize[0] - 20 - 600) / 2 + 'px';
+            //让弹出层在页面中垂直左右居中(个性)
+            var arrayConSize = getConSize(conId)
+            popObj.style.top = arrayPageScroll[1] + (arrayPageSize[3] - arrayConSize[1]) / 2 - 230 + 'px';
+            popObj.style.left = (arrayPageSize[0] - arrayConSize[0]) / 2 - 210 + 'px';
+        }
+        //获取内容层内容原始尺寸
+        function getConSize(conId) {
+            var conObj = document.getElementById(conId)
+            conObj.style.position = "absolute";
+            conObj.style.left = -1000 + "px";
+            conObj.style.display = "";
+            var arrayConSize = [conObj.offsetWidth, conObj.offsetHeight]
+            conObj.style.display = "none";
+            return arrayConSize;
+        }
+        function insertAfter(newElement, targetElement) {//插入
+            var parent = targetElement.parentNode;
+            if (parent.lastChild == targetElement) {
+                parent.appendChild(newElement);
+            }
+            else {
+                parent.insertBefore(newElement, targetElement.nextSibling);
+            }
+        }
+        //获取滚动条的高度
+        function getPageScroll() {
+            var yScroll;
+            if (self.pageYOffset) {
+                yScroll = self.pageYOffset;
+            } else if (document.documentElement && document.documentElement.scrollTop) {
+                yScroll = document.documentElement.scrollTop;
+            } else if (document.body) {
+                yScroll = document.body.scrollTop;
+            }
+            arrayPageScroll = new Array('', yScroll)
+            return arrayPageScroll;
+        }
+        //获取页面实际大小
+        function getPageSize() {
+            var xScroll, yScroll;
+            if (window.innerHeight && window.scrollMaxY) {
+                xScroll = document.body.scrollWidth;
+                yScroll = window.innerHeight + window.scrollMaxY;
+            } else if (document.body.scrollHeight > document.body.offsetHeight) {
+                sScroll = document.body.scrollWidth;
+                yScroll = document.body.scrollHeight;
+            } else {
+                xScroll = document.body.offsetWidth;
+                yScroll = document.body.offsetHeight;
+            }
+            var windowWidth, windowHeight;
+            //var pageHeight,pageWidth;
+            if (self.innerHeight) {
+                windowWidth = self.innerWidth;
+                windowHeight = self.innerHeight;
+            } else if (document.documentElement && document.documentElement.clientHeight) {
+                windowWidth = document.documentElement.clientWidth;
+                windowHeight = document.documentElement.clientHeight;
+            } else if (document.body) {
+                windowWidth = document.body.clientWidth;
+                windowHeight = document.body.clientHeight;
+            }
+            var pageWidth, pageHeight
+            if (yScroll < windowHeight) {
+                pageHeight = windowHeight;
+            } else {
+                pageHeight = yScroll;
+            }
+            if (xScroll < windowWidth) {
+                pageWidth = windowWidth;
+            } else {
+                pageWidth = xScroll;
+            }
+            arrayPageSize = new Array(pageWidth, pageHeight, windowWidth, windowHeight)
+            return arrayPageSize;
+        }
+        //关闭弹出层
+        function closeLayer() {
+            document.getElementById("popupAddr").style.display = "none";
+            document.getElementById("bodybg").style.display = "none";
+            return false;
+        }
+</script>
+    <script type="text/javascript">
+        //拖拽
+        //对“拖动点”定义：onMousedown="StartDrag(this)" onMouseup="StopDrag(this)" onMousemove="Drag(this)"即可
+        var move = false, oldcolor, _X, _Y;
+        function StartDrag(obj) {  //定义准备拖拽的函数
+            obj.setCapture(); //对当前对象的鼠标动作进行跟踪
+            oldcolor = obj.style.backgroundColor;
+            obj.style.background = "#999";
+            move = true;
+            //获取鼠标相对内容层坐标
+            var parentwin = document.getElementById("popupAddr");
+            _X = parentwin.offsetLeft - event.clientX
+            _Y = parentwin.offsetTop - event.clientY
+        }
+        function Drag(obj) {        //定义拖拽函数
+            if (move) {
+                var parentwin = document.getElementById("popupAddr");
+                parentwin.style.left = event.clientX + _X;
+                parentwin.style.top = event.clientY + _Y;
+            }
+        }
+        function StopDrag(obj) {   //定义停止拖拽函数
+            obj.style.background = oldcolor;
+            obj.releaseCapture(); //停止对当前对象的鼠标跟踪
+            move = false;
+        }
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        /* setup navigation, content boxes, etc... */
+        Administry.setup();
+
+        /* progress bar animations - setting initial values */
+        Administry.progress("#progress1", 1, 5);
+        Administry.progress("#progress2", 2, 5);
+        Administry.progress("#progress3", 2, 5);
+
+    });
+</script>
+    <style type="text/css">
+        .auto-style1 {
+            font-size: small;
+        }
+        .auto-style2 {
+            font-size: x-small;
+            border-bottom:none;
+        }
+       
+    </style>
+
+     <!-- 让网页无法后退//--> 
+    <script > 
+<!-- 
+    javascript: window.history.forward(1);
+    //--> 
+</script> 
+
+
+</head>
+<body>
+	<form id="form1" runat="server">
+	<!-- Header -->
+	<header id="top">
+		<div class="wrapper">
+			<!-- Title/Logo - can use text instead of image -->
+			<div id="title"><img SRC="img/logo.png" alt="Administry" /><!--<span>Administry</span> demo--></div>
+			<!-- Top navigation -->
+			<div id="topnav">
+				&nbsp;你好！  
+                <asp:Label ID="Label_zh2" runat="server" ForeColor="#999999" Text="zh2"></asp:Label>
+&nbsp;<span>|</span>
+                <asp:LinkButton ID="LinkButton_ChangePW" runat="server" OnClick="LinkButton_ChangePW_Click">修改密码</asp:LinkButton>
+&nbsp;<span>|</span>
+                <asp:LinkButton ID="LinkButton_out" runat="server" OnClick="LinkButton_out_Click">注销</asp:LinkButton>
+                <br />
+                <%
+          if ( newmesgcount ==1)
+          {
+              Response.Write(@"
+                    <small><a href=""/Message_manage.aspx"" class=""high"">您有新的消息!</a></small>
+     ");
+          }          
+%>
+				
+			</div>
+			<!-- End of Top navigation -->
+			<!-- Main navigation -->
+   <asp:ContentPlaceHolder id="ContentPlaceHolder3" runat="server">
+			<nav id="menu">
+                <ul class="sf-menu">
+                    <li class="current" style="font-family: 宋体, Arial, Helvetica, sans-serif"><a HREF="/Default.aspx" class="auto-style1">控制面板</a></li>
+                    <li><a HREF="#" class="auto-style1">消息</a>
+                        <ul>
+                            <li><a HREF="/Message.aspx" class="auto-style1">消息主页</a> </li>
+                            <li><a href="#" class="auto-style1">快捷菜单</a>
+                                <ul>
+                                    <li><a HREF="/Message_write.aspx" class="auto-style1">发送新消息</a></li>
+                                    <li><a HREF="/Message_manage.aspx" class="auto-style1">消息管理</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a HREF="/Announcement.aspx" class="auto-style1">公告</a></li>
+                    <li><a HREF="/Setting.aspx" class="auto-style1">个人设置</a></li>
+<%
+          if ( uJBZ == 2)
+          {
+              Response.Write(@"
+                    <li><a HREF='Admin_setting.aspx' class='auto-style1'>管理员设置</a></li> 
+     ");
+          }          
+%>
+                </ul>
+            </nav>
+       </asp:ContentPlaceHolder>
+			<!-- End of Main navigation -->
+			<!-- Aside links -->
+			<aside>&nbsp;</aside>
+			<!-- End of Aside links -->
+		</div>
+	</header>
+	<!-- End of Header -->
+	<!-- Page title -->
+	<div id="pagetitle">
+		<div class="wrapper">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
+				<h1 class="auto-style1">  公告</h1>	
+        </asp:ContentPlaceHolder>
+		
+			<!-- Quick search box -->
+		</div>
+	</div>
+	<!-- End of Page title -->
+	
+	<!-- Page content -->
+	<div id="page">
+		<!-- Wrapper -->
+		<div class="wrapper">
+				<!-- Left column/section -->
+				<section class="column width6 first">
+				
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+            <div class="colgroup leading">
+                <div class="column width3 first">
+                    <h3>&nbsp;</h3>
+                    <p>
+                    </p>
+                </div>
+                <div class="column width3">
+                    <h4>&nbsp;</h4>
+                    <p>&nbsp;
+                        </p>
+                </div>
+            </div>
+					
+					<div class="colgroup leading">
+						<div class="column width3 first">
+							<h4>&nbsp;</h4>
+							<hr/>
+							<table class="no-style full">
+								<tbody>
+									<tr>
+										<td>&nbsp;</td>
+										<td class="ta-right">&nbsp;</td>
+										<td class="ta-right">&nbsp;</td>
+									</tr>
+									<tr>
+										<td>&nbsp;</td>
+										<td class="ta-right">&nbsp;</td>
+										<td class="ta-right">&nbsp;</td>
+									</tr>
+									<tr>
+										<td>&nbsp;</td>
+										<td class="ta-right">&nbsp;</td>
+										<td class="ta-right">&nbsp;</td>
+									</tr>
+									<tr>
+										<td>&nbsp;</td>
+										<td class="ta-right">&nbsp;</td>
+										<td class="ta-right">&nbsp;</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="column width3">
+							<h4>&nbsp;</h4>
+							<hr/>
+							<table class="no-style full">
+								<tbody>
+									<tr>
+										<td>&nbsp;</td>
+										<td class="ta-right">&nbsp;</td>
+										<td class="ta-right"></td>
+									</tr>
+									<tr>
+										<td>&nbsp;</td>
+										<td class="ta-right">&nbsp;</td>
+										<td class="ta-right">&nbsp;</td>
+									</tr>
+									<tr>
+										<td>&nbsp;</td>
+										<td class="ta-right">&nbsp;</td>
+										<td class="ta-right"></td>
+									</tr>
+									<tr>
+										<td>&nbsp;</td>
+										<td class="ta-right">&nbsp;</td>
+										<td class="ta-right">&nbsp;</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				
+        </asp:ContentPlaceHolder>
+
+    
+					<div class="colgroup leading">
+					</div>
+				
+				</section>
+				<!-- End of Left column/section -->
+				
+				<!-- Right column/section -->
+				<aside class="column width2">
+					<div id="rightmenu">
+						<header>
+							<h3>账户信息</h3>
+						</header>
+						<dl class="first">
+							<dt><img width="16" height="16" alt="" SRC="img/key.png"></dt>
+							<dd><a href="/Setting.aspx" style="color:black ; border-bottom:none;"title="用户信息">Administry (<asp:Label ID="Label_zh1" runat="server" Text="zh"></asp:Label>
+                                )</a></dd>
+							<dd class="last"></dd>
+							
+						</dl>
+					</div>
+					<div class="content-box">
+						<header>
+							<h3>最新公告</h3>
+						</header>
+						<section>
+							<dl>
+								<dt></dt>
+								<dd></dd>
+								<dt></dt>
+								<dd></dd>
+							</dl>
+						</section>
+ 
+					    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" EnableModelValidation="True" ShowHeader="False" Width="197px" AllowPaging="True" PageSize="4" ForeColor="#999999" GridLines="None">
+                             <Columns>
+                                 <asp:TemplateField HeaderText="题目">
+                                     <ItemTemplate>
+                                         <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# Eval("ggid", "Announcement_text.aspx?ggid={0}") %>' Text='<%# Eval("tm") %>' Font-Underline="False" ForeColor="#3366FF" CssClass="high" BorderColor="White"></asp:HyperLink>
+                                    </ItemTemplate>
+                                 </asp:TemplateField>
+                             </Columns>
+                        </asp:GridView>
+                            
+                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:MISConnectionString %>" SelectCommand="SELECT top 4 [tm], [ggid] FROM [t_gg] ORDER BY [time] DESC"></asp:SqlDataSource>
+					</div>
+				</aside>
+				<!-- End of Right column/section -->
+				
+		</div>
+		<!-- End of Wrapper -->
+	</div>
+	<!-- End of Page content -->
+	
+	<!-- Page footer -->
+	<footer id="bottom">
+		<div class="wrapper" >
+
+			<nav>
+				<a href="#" class="auto-style2" style="border-bottom:none;">控制面板</a> &middot;
+				<a href="#" class="auto-style2" style="border-bottom:none;">消息</a> &middot;
+				<a href="#" class="auto-style2" style="border-bottom:none;">公告</a> &middot;
+				<a href="#" class="auto-style2" style="border-bottom:none;">设置</a> &middot;
+				<a href="#" class="auto-style2" style="border-bottom:none;">关于</a> &middot;
+<%--				<a href="#">Events</a> &middot;
+				<a href="#">Newsletter</a> &middot;
+				<a href="#">Settings</a>--%>
+			</nav>
+			<p class="auto-style2">Copyright © 2013</p>
+		</div>
+	</footer>
+	<!-- End of Page footer -->
+	
+	<!-- Animated footer -->
+	<footer id="animated">
+		<ul>
+			<li><a href="Default.aspx">控制面板</a></li>
+			<li><a href="Message.aspx">消息</a></li>
+			<li><a href="Announcement.aspx">公告</a></li>
+			<li><a href="Setting.aspx">设置</a></li>
+			<li><a href="#">关于</a></li>
+<%--			<li><a href="#">Events</a></li>
+			<li><a href="#">Newsletter</a></li>
+			<li><a href="#">Settings</a></li>--%>
+		</ul>
+	</footer>
+	<!-- End of Animated footer -->
+	
+	<!-- Scroll to top link -->
+	<a href="#" id="totop">^ scroll to top</a>
+
+<!-- Admin template javascript load -->
+<script type="text/javascript" SRC="js/administry.js"></script>
+    </form>
+</body>
+</html>
+

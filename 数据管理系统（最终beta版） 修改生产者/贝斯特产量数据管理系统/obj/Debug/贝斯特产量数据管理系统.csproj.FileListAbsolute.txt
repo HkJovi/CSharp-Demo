@@ -1,0 +1,74 @@
+C:\Users\Admin\Desktop\贝斯特产量数据管理系统\贝斯特产量数据管理系统\bin\Debug\贝斯特产量数据管理系统.exe
+C:\Users\Admin\Desktop\贝斯特产量数据管理系统\贝斯特产量数据管理系统\bin\Debug\贝斯特产量数据管理系统.pdb
+C:\Users\Admin\Desktop\贝斯特产量数据管理系统\贝斯特产量数据管理系统\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Users\Admin\Desktop\贝斯特产量数据管理系统\贝斯特产量数据管理系统\bin\Debug\DevComponents.DotNetBar2.xml
+C:\Users\Admin\Desktop\贝斯特产量数据管理系统\贝斯特产量数据管理系统\obj\Debug\贝斯特产量数据管理系统.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\贝斯特产量数据管理系统\贝斯特产量数据管理系统\obj\Debug\贝斯特产量数据管理系统.Properties.Resources.resources
+C:\Users\Admin\Desktop\贝斯特产量数据管理系统\贝斯特产量数据管理系统\obj\Debug\贝斯特产量数据管理系统.csproj.GenerateResource.Cache
+C:\Users\Admin\Desktop\贝斯特产量数据管理系统\贝斯特产量数据管理系统\obj\Debug\贝斯特产量数据管理系统.exe
+C:\Users\Admin\Desktop\贝斯特产量数据管理系统\贝斯特产量数据管理系统\obj\Debug\贝斯特产量数据管理系统.pdb
+C:\Users\Admin\Desktop\贝斯特产量数据管理系统\贝斯特产量数据管理系统\bin\Debug\贝斯特产量数据管理系统.exe.config
+C:\Users\Admin\Desktop\贝斯特产量数据管理系统\贝斯特产量数据管理系统\bin\Debug\CSkin.dll
+C:\Users\Admin\Desktop\贝斯特产量数据管理系统\贝斯特产量数据管理系统\obj\Debug\贝斯特产量数据管理系统.FrmLogin.resources
+C:\Users\Admin\Desktop\贝斯特产量数据管理系统\贝斯特产量数据管理系统\obj\Debug\贝斯特产量数据管理系统.FrmMain.resources
+C:\Users\Admin\Desktop\贝斯特产量数据管理系统\贝斯特产量数据管理系统\bin\Debug\BLL.dll
+C:\Users\Admin\Desktop\贝斯特产量数据管理系统\贝斯特产量数据管理系统\bin\Debug\DAL.dll
+C:\Users\Admin\Desktop\贝斯特产量数据管理系统\贝斯特产量数据管理系统\bin\Debug\BLL.pdb
+C:\Users\Admin\Desktop\贝斯特产量数据管理系统\贝斯特产量数据管理系统\bin\Debug\DAL.pdb
+C:\Users\Admin\Desktop\fuben\贝斯特产量数据管理系统\bin\Debug\贝斯特产量数据管理系统.exe.config
+C:\Users\Admin\Desktop\fuben\贝斯特产量数据管理系统\obj\Debug\贝斯特产量数据管理系统.exe
+C:\Users\Admin\Desktop\fuben\贝斯特产量数据管理系统\obj\Debug\贝斯特产量数据管理系统.pdb
+C:\Users\Admin\Desktop\fuben - 副本\贝斯特产量数据管理系统\bin\Debug\贝斯特产量数据管理系统.exe.config
+C:\Users\Admin\Desktop\fuben - 副本\贝斯特产量数据管理系统\obj\Debug\贝斯特产量数据管理系统.exe
+C:\Users\Admin\Desktop\fuben - 副本\贝斯特产量数据管理系统\obj\Debug\贝斯特产量数据管理系统.pdb
+C:\Users\Admin\Desktop\fuben - 副本\贝斯特产量数据管理系统\bin\Debug\贝斯特产量数据管理系统.exe
+C:\Users\Admin\Desktop\fuben - 副本\贝斯特产量数据管理系统\bin\Debug\贝斯特产量数据管理系统.pdb
+C:\Users\Admin\Desktop\fuben - 副本\贝斯特产量数据管理系统\bin\Debug\BLL.dll
+C:\Users\Admin\Desktop\fuben - 副本\贝斯特产量数据管理系统\bin\Debug\DAL.dll
+C:\Users\Admin\Desktop\fuben - 副本\贝斯特产量数据管理系统\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Users\Admin\Desktop\fuben - 副本\贝斯特产量数据管理系统\bin\Debug\BLL.pdb
+C:\Users\Admin\Desktop\fuben - 副本\贝斯特产量数据管理系统\bin\Debug\DAL.pdb
+C:\Users\Admin\Desktop\fuben - 副本\贝斯特产量数据管理系统\bin\Debug\DevComponents.DotNetBar2.xml
+C:\Users\Admin\Desktop\fuben - 副本\贝斯特产量数据管理系统\obj\Debug\贝斯特产量数据管理系统.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\fuben - 副本\贝斯特产量数据管理系统\obj\Debug\贝斯特产量数据管理系统.FrmLogin.resources
+C:\Users\Admin\Desktop\fuben - 副本\贝斯特产量数据管理系统\obj\Debug\贝斯特产量数据管理系统.FrmMain.resources
+C:\Users\Admin\Desktop\fuben - 副本\贝斯特产量数据管理系统\obj\Debug\贝斯特产量数据管理系统.Properties.Resources.resources
+C:\Users\Admin\Desktop\fuben - 副本\贝斯特产量数据管理系统\obj\Debug\贝斯特产量数据管理系统.csproj.GenerateResource.Cache
+C:\Users\Admin\Desktop\新建文件夹 (2)\贝斯特产量数据管理系统\bin\Debug\贝斯特产量数据管理系统.exe.config
+C:\Users\Admin\Desktop\新建文件夹 (2)\贝斯特产量数据管理系统\obj\Debug\贝斯特产量数据管理系统.exe
+C:\Users\Admin\Desktop\新建文件夹 (2)\贝斯特产量数据管理系统\obj\Debug\贝斯特产量数据管理系统.pdb
+C:\Users\Admin\Desktop\新建文件夹 (2)\贝斯特产量数据管理系统\bin\Debug\贝斯特产量数据管理系统.exe
+C:\Users\Admin\Desktop\新建文件夹 (2)\贝斯特产量数据管理系统\bin\Debug\贝斯特产量数据管理系统.pdb
+C:\Users\Admin\Desktop\新建文件夹 (2)\贝斯特产量数据管理系统\bin\Debug\BLL.dll
+C:\Users\Admin\Desktop\新建文件夹 (2)\贝斯特产量数据管理系统\bin\Debug\DAL.dll
+C:\Users\Admin\Desktop\新建文件夹 (2)\贝斯特产量数据管理系统\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Users\Admin\Desktop\新建文件夹 (2)\贝斯特产量数据管理系统\bin\Debug\BLL.pdb
+C:\Users\Admin\Desktop\新建文件夹 (2)\贝斯特产量数据管理系统\bin\Debug\DAL.pdb
+C:\Users\Admin\Desktop\新建文件夹 (2)\贝斯特产量数据管理系统\bin\Debug\DevComponents.DotNetBar2.xml
+C:\Users\Admin\Desktop\新建文件夹 (2)\贝斯特产量数据管理系统\obj\Debug\贝斯特产量数据管理系统.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\新建文件夹 (2)\贝斯特产量数据管理系统\obj\Debug\贝斯特产量数据管理系统.FrmLogin.resources
+C:\Users\Admin\Desktop\新建文件夹 (2)\贝斯特产量数据管理系统\obj\Debug\贝斯特产量数据管理系统.FrmMain.resources
+C:\Users\Admin\Desktop\新建文件夹 (2)\贝斯特产量数据管理系统\obj\Debug\贝斯特产量数据管理系统.Properties.Resources.resources
+C:\Users\Admin\Desktop\新建文件夹 (2)\贝斯特产量数据管理系统\obj\Debug\贝斯特产量数据管理系统.csproj.GenerateResource.Cache
+C:\Users\Admin\Desktop\新建文件夹 (2)\贝斯特产量数据管理系统\obj\Debug\贝斯特产量数据管理系统.FrmXgpwd.resources
+C:\Users\Admin\Desktop\新建文件夹 (2)\贝斯特产量数据管理系统\bin\Debug\CSkin.dll
+C:\Users\Admin\Desktop\新建文件夹 (2)\贝斯特产量数据管理系统\obj\Debug\贝斯特产量数据管理系统.FrmAbout.resources
+D:\C语言学习资料\数据管理系统（最终beta版）\贝斯特产量数据管理系统\bin\Debug\贝斯特产量数据管理系统.exe.config
+D:\C语言学习资料\数据管理系统（最终beta版）\贝斯特产量数据管理系统\obj\Debug\贝斯特产量数据管理系统.exe
+D:\C语言学习资料\数据管理系统（最终beta版）\贝斯特产量数据管理系统\obj\Debug\贝斯特产量数据管理系统.pdb
+D:\C语言学习资料\数据管理系统（最终beta版）\贝斯特产量数据管理系统\bin\Debug\贝斯特产量数据管理系统.exe
+D:\C语言学习资料\数据管理系统（最终beta版）\贝斯特产量数据管理系统\bin\Debug\贝斯特产量数据管理系统.pdb
+D:\C语言学习资料\数据管理系统（最终beta版）\贝斯特产量数据管理系统\bin\Debug\BLL.dll
+D:\C语言学习资料\数据管理系统（最终beta版）\贝斯特产量数据管理系统\bin\Debug\CSkin.dll
+D:\C语言学习资料\数据管理系统（最终beta版）\贝斯特产量数据管理系统\bin\Debug\DAL.dll
+D:\C语言学习资料\数据管理系统（最终beta版）\贝斯特产量数据管理系统\bin\Debug\DevComponents.DotNetBar2.dll
+D:\C语言学习资料\数据管理系统（最终beta版）\贝斯特产量数据管理系统\bin\Debug\BLL.pdb
+D:\C语言学习资料\数据管理系统（最终beta版）\贝斯特产量数据管理系统\bin\Debug\DAL.pdb
+D:\C语言学习资料\数据管理系统（最终beta版）\贝斯特产量数据管理系统\bin\Debug\DevComponents.DotNetBar2.xml
+D:\C语言学习资料\数据管理系统（最终beta版）\贝斯特产量数据管理系统\obj\Debug\贝斯特产量数据管理系统.csprojResolveAssemblyReference.cache
+D:\C语言学习资料\数据管理系统（最终beta版）\贝斯特产量数据管理系统\obj\Debug\贝斯特产量数据管理系统.FrmAbout.resources
+D:\C语言学习资料\数据管理系统（最终beta版）\贝斯特产量数据管理系统\obj\Debug\贝斯特产量数据管理系统.FrmLogin.resources
+D:\C语言学习资料\数据管理系统（最终beta版）\贝斯特产量数据管理系统\obj\Debug\贝斯特产量数据管理系统.FrmMain.resources
+D:\C语言学习资料\数据管理系统（最终beta版）\贝斯特产量数据管理系统\obj\Debug\贝斯特产量数据管理系统.FrmXgpwd.resources
+D:\C语言学习资料\数据管理系统（最终beta版）\贝斯特产量数据管理系统\obj\Debug\贝斯特产量数据管理系统.Properties.Resources.resources
+D:\C语言学习资料\数据管理系统（最终beta版）\贝斯特产量数据管理系统\obj\Debug\贝斯特产量数据管理系统.csproj.GenerateResource.Cache

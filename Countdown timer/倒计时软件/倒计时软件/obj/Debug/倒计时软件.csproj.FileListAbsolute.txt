@@ -1,0 +1,28 @@
+C:\Users\Administrator\Desktop\倒计时软件\倒计时软件\bin\Debug\倒计时软件.exe
+C:\Users\Administrator\Desktop\倒计时软件\倒计时软件\bin\Debug\倒计时软件.pdb
+C:\Users\Administrator\Desktop\倒计时软件\倒计时软件\obj\Debug\倒计时软件.Main.resources
+C:\Users\Administrator\Desktop\倒计时软件\倒计时软件\obj\Debug\倒计时软件.Properties.Resources.resources
+C:\Users\Administrator\Desktop\倒计时软件\倒计时软件\obj\Debug\倒计时软件.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\倒计时软件\倒计时软件\obj\Debug\倒计时软件.exe
+C:\Users\Administrator\Desktop\倒计时软件\倒计时软件\obj\Debug\倒计时软件.pdb
+C:\Users\Administrator\Desktop\倒计时软件\倒计时软件\obj\Debug\倒计时软件.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\512705124b79595f7b000036\倒计时软件\倒计时软件\obj\Debug\倒计时软件.exe
+C:\Users\Administrator\Desktop\512705124b79595f7b000036\倒计时软件\倒计时软件\obj\Debug\倒计时软件.pdb
+C:\Users\Administrator\Desktop\512705124b79595f7b000036\倒计时软件\倒计时软件\bin\Debug\倒计时软件.exe
+C:\Users\Administrator\Desktop\512705124b79595f7b000036\倒计时软件\倒计时软件\bin\Debug\倒计时软件.pdb
+C:\Users\Administrator\Desktop\512705124b79595f7b000036\倒计时软件\倒计时软件\obj\Debug\倒计时软件.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\512705124b79595f7b000036\倒计时软件\倒计时软件\obj\Debug\倒计时软件.Main.resources
+C:\Users\Administrator\Desktop\512705124b79595f7b000036\倒计时软件\倒计时软件\obj\Debug\倒计时软件.Properties.Resources.resources
+C:\Users\Administrator\Desktop\512705124b79595f7b000036\倒计时软件\倒计时软件\obj\Debug\倒计时软件.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\倒计时软件\倒计时软件\obj\Debug\倒计时软件.About.resources
+C:\Users\Administrator\Desktop\倒计时软件 - 副本\倒计时软件\obj\Debug\倒计时软件.exe
+C:\Users\Administrator\Desktop\倒计时软件 - 副本\倒计时软件\obj\Debug\倒计时软件.pdb
+C:\Users\Administrator\Desktop\倒计时软件 - 副本\倒计时软件\bin\Debug\倒计时软件.exe
+C:\Users\Administrator\Desktop\倒计时软件 - 副本\倒计时软件\bin\Debug\倒计时软件.pdb
+C:\Users\Administrator\Desktop\倒计时软件 - 副本\倒计时软件\obj\Debug\倒计时软件.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\倒计时软件 - 副本\倒计时软件\obj\Debug\倒计时软件.About.resources
+C:\Users\Administrator\Desktop\倒计时软件 - 副本\倒计时软件\obj\Debug\倒计时软件.Main.resources
+C:\Users\Administrator\Desktop\倒计时软件 - 副本\倒计时软件\obj\Debug\倒计时软件.Properties.Resources.resources
+C:\Users\Administrator\Desktop\倒计时软件 - 副本\倒计时软件\obj\Debug\倒计时软件.csproj.GenerateResource.Cache
+D:\C语言学习资料\倒计时软件源代码及素材\倒计时软件\倒计时软件\obj\Debug\倒计时软件.exe
+D:\C语言学习资料\倒计时软件源代码及素材\倒计时软件\倒计时软件\obj\Debug\倒计时软件.pdb
